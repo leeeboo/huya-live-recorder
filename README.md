@@ -3,6 +3,10 @@
 Only for MacOS or Linux or Unix. Not work for windows!!!
 
 Need ffmpeg installed
+Need Golang ENV
+
+## Build
+go build .
 
 ## Usage
 
