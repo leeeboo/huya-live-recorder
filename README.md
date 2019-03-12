@@ -12,3 +12,5 @@ go build .
 
     ./huya-live-recorder --room=20641
     20641 means room name which can be found in url like 'https://huya.com/XXX'.
+
+    Press Ctrl + c to stop.
