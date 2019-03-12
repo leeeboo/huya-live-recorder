@@ -103,8 +103,6 @@ func main() {
 
 	jsonStr := strings.Replace(tmp[0], "};", "}", 1)
 
-	fmt.Println(jsonStr)
-
 	var hyPlayerConfig HyPlayerConfig
 
 	err = json.Unmarshal([]byte(jsonStr), &hyPlayerConfig)
@@ -123,6 +121,9 @@ func main() {
 		fmt.Println("错误：", "解析异常或主播还未开播")
 		return
 	}
+
+	j, _ := json.Marshal(hyPlayerConfig)
+	fmt.Println(string(j))
 
 	title := fmt.Sprintf("%s-%s", hyPlayerConfig.Stream.Data[0].GameLiveInfo.Nick, time.Now().Format("2006-01-02 15:04:05"))
 
